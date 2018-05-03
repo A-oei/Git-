@@ -5,13 +5,54 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Git</title>
+    <title>git命令</title>
 </head>
 <body>
-<div class="box">
-    <p>完成第一个功能</p>
-    <p>完成了都二个功能</p>
-    <p>查看git分支</p>
-</div>
+<h3>hello git</h3>
+<pre>
+    git config --global user.name ‘xxx’
+    git config --global user.email ‘xxx’
+    配置当前用户的git信息，姓名/邮箱
+
+    git config --list 查看当前用户信息
+
+    git init 初始化一个git的工作环境
+
+    1.git --bare 创建一个裸仓库
+    裸仓库没有工作区，只有暂存区和仓库，一般作为多个用户的提交文件的公共区域
+    需要注意的是作为公共区域文件夹名称必须是以.git结尾的
+
+    2.rm -rf  删除
+
+    3.git push XXX 提交文件到XXX
+
+    4.git pull XXX 拉去文件XXX的内容
+
+    5. git add ‘xxx’ 将xxx文件添加到暂存区，如果后面添加-A或*表示将所有文件添加到暂存区
+
+    6. git commit -m '本次的提交信息说明' 将所有文件提交到仓库区域，并配置提交的信息
+
+    7. git log 查看全部提交记录
+
+    只要我们使用commit提交过一次代码，git就会默认为我们创建一个master分支（主分支）
+    8. git branch xxx 创建一个xxx分支
+
+    9. git branch 查看所有分支
+
+    10. git checkout xxx 切换到xxx分支
+
+    11. git merge xxx 将xxx分支合并到当前所在的分支
+
+    12. git branch -d xxx 删除xxx分支（不能在xxx分支上执行该命令）
+
+    13. git reset --hard md5编码id 回溯到该hard状态
+
+    end 按q退出
+
+    14. git checkout -d xxx 创建并切换到xxx分支，该命令相当于git branch xxx 和 git checkout xxx 命令的集合
+
+    15. ssh keygen -t rsa 生成公钥和私钥，生成路径在当前电脑/user/.ssh文件，其中id_rsa文件保存的使我们的私钥，id_rsa.pub
+    保存的是我们的公共钥匙，提交公共钥匙到github（用户/setting/SSH and GPG keys）
+</pre>
 </body>
 </html>
